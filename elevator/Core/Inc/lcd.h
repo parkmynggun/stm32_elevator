@@ -10,6 +10,7 @@
 
 #include "main.h"
 
-uint8_t a = 0;
+void lcd_send_cmd();
+void lcd_init();
 
 #endif /* INC_LCD_H_ */
