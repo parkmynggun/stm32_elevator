@@ -1,0 +1,18 @@
+!SESSION 2025-06-18 16:39:27.240 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/user5/worksspace_semicon/elevator
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-06-18 16:39:32.740
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-06-18 16:39:32.741
+!MESSAGE Log4j2 initialized with config file /home/user5/worksspace_semicon/elevator/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-06-18 16:39:35.238
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-18 16:40:48.744
+!MESSAGE Indexed 'elevator' (19 sources, 81 headers) in 4.17 sec: 4,306 declarations; 18,187 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0089%)
