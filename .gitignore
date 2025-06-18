@@ -3,7 +3,7 @@
 # 빌드 출력 디렉토리
 /Debug/
 /Release/
-
+/elevator/Debug
 # 빌드 아티팩트
 *.o
 *.d
