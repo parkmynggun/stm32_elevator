@@ -1,0 +1,39 @@
+/.metadata/
+
+# 빌드 출력 디렉토리
+/Debug/
+/Release/
+
+# 빌드 아티팩트
+*.o
+*.d
+*.elf
+*.map
+*.bin
+*.hex
+*.list
+*.out
+*.a
+
+# 자동 생성 로그 및 레포트
+*.log
+*.dep
+*.su
+
+# IDE 설정 폴더 (개인 설정)
+/.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# STM32CubeIDE 자동 생성 설정 파일 제외 (필요에 따라 포함 여부 선택)
+/.settings/
+
+# OS 관련 파일
+.DS_Store
+Thumbs.db
+
+# 백업 및 기타 임시파일
+*~
+*.orig
