@@ -23,4 +23,5 @@ void lcd_init()
 	HAL_Delay(10);
 	lcd_send_cmd(0x20);	// 4bit mode
 	HAL_Delay(10);
+	HAL_Delay(10);
 }
