@@ -26,6 +26,7 @@
 /* USER CODE BEGIN Includes */
 
 #include "photo.h"
+#include "common.h"
 
 /* USER CODE END Includes */
 
@@ -101,6 +102,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  uint8_t sensed = current_floor();
+	  if(sensed == target_floor)
+	  {
+		  stepper_stop();
+		  current_floor = target_floor;
+		  break;
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
