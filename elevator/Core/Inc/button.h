@@ -4,6 +4,9 @@
 #include "main.h"
 #include "stdbool.h"
 
+
+
+
 typedef enum {
 
     BUTTON_TYPE_FLOOR,		//층수
@@ -23,8 +26,9 @@ typedef struct
 
 }BUTTON_CONTROL;
 
+extern BUTTON_CONTROL button[]; // 메인에서 읽을 수 있도록 헤더파일에 선언
 
-bool buttonDebounce(uint8_t num);
+#define BUTTON_COUNT 5
 
 bool buttonGetPressed_Floor(uint8_t num);
 
