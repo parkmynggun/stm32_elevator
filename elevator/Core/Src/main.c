@@ -94,7 +94,11 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  i2cLcd_Init();
+  moveCursor(0, 0);
+  lcdString("Hello ARM !!!");
+  moveCursor(1, 0);
+  lcdString("Good Morning !");
   /* USER CODE END 2 */
 
   /* Infinite loop */
