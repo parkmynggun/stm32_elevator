@@ -8,14 +8,14 @@
 
 
 // 핀 정의
-#define Photo_Floor1_GPIO_PORT		GPIOB
-#define Photo_Floor1_PIN			GPIO_PIN_13
+#define Photo_Floor1_GPIO_PORT		GPIOA
+#define Photo_Floor1_PIN			GPIO_PIN_9
 
-#define Photo_Floor2_GPIO_PORT		GPIOB
-#define Photo_Floor2_PIN			GPIO_PIN_14
+#define Photo_Floor2_GPIO_PORT		GPIOA
+#define Photo_Floor2_PIN			GPIO_PIN_10
 
-#define Photo_Floor3_GPIO_PORT		GPIOB
-#define Photo_Floor3_PIN			GPIO_PIN_15
+#define Photo_Floor3_GPIO_PORT		GPIOA
+#define Photo_Floor3_PIN			GPIO_PIN_11
 
 
 
