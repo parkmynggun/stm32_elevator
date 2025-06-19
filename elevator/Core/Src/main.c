@@ -24,7 +24,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stepper.h"
+#include "motor.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,13 +93,27 @@ int main(void)
   MX_TIM11_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start(&htim11);                  // 타이머11 시작 (지연 등 용도)
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);     // TIM3 CH2 서보용 PWM 시작
 
+  // 서보 초기 위치 설정 (0도)
+  TIM3->CCR2 = 1600;
+  HAL_Delay(500);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    // 버튼 읽기 (풀업이므로 눌렀을 때 LOW(0) 상태)
+	    Motor_HandleInput();
+	    HAL_Delay(10);
+
+    // 눌렸을 때 GPIO_PIN_RESET (0) 이므로 falling edge 감지
+
+
+    // 상태 갱신 (항상 마지막에 해야 중복 실행 안 됨)
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
