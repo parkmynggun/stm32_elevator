@@ -1,45 +1,28 @@
 #include "button.h"
 
-BUTTON_CONTROL button[3]=
+BUTTON_CONTROL button[]=
 {
-		{GPIOC, GPIO_PIN_8, 0},
-		{GPIOC, GPIO_PIN_6, 0},
-		{GPIOC, GPIO_PIN_5, 0}, //여기까지 1~3층
-		{GPIOC, GPIO_PIN_9, 0},
-		{GPIOB, GPIO_PIN_8, 0}	// 여기까지 위아래
+		{GPIOC, GPIO_PIN_8, 0, BUTTON_TYPE_FLOOR},
+		{GPIOC, GPIO_PIN_6, 0, BUTTON_TYPE_FLOOR},
+		{GPIOC, GPIO_PIN_5, 0, BUTTON_TYPE_FLOOR}, //여기까지 1~3층
+		{GPIOC, GPIO_PIN_9, 0, BUTTON_TYPE_DIRECTION},
+		{GPIOB, GPIO_PIN_8, 0, BUTTON_TYPE_DIRECTION}	// 여기까지 위아래
 
 
 };
 
-
-bool  buttonGetPressed(uint8_t num)
+bool buttonDebounce(uint8_t num)	//헬퍼 함수
 {
-	static uint32_t prevTime[3] = {0xffffffff};
 
-	if(prevTime[num] == 0xffffffff)
-	{
-		prevTime[num] = HAL_GetTick();
-	}
+}
 
-	bool ret = false;
+bool  buttonGetPressed_Floor(uint8_t num)	//층수 디바운싱 함수
+{
 
 
-	if(HAL_GPIO_ReadPin(button[num].port, button[num].pinNumber) == button[num].onState)
-	{
-		uint32_t currTime = HAL_GetTick();
+}
 
-		if(currTime - prevTime[num] > 30)
-		{
-			if(HAL_GPIO_ReadPin(button[num].port, button[num].pinNumber) == button[num].onState)
-			{
-				ret =true;
-			}
-			prevTime[num] = currTime;
-		}
-
-	}
-
-	return ret;
-
+bool buttonGetPressed_Direction(uint8_t num)	//위아래 디바운싱 함수
+{
 
 }
