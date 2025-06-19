@@ -30,8 +30,8 @@ extern BUTTON_CONTROL button[]; // 메인에서 읽을 수 있도록 헤더파�
 
 #define BUTTON_COUNT 5
 
-bool buttonGetPressed_Floor(uint8_t num);
+bool buttongetpressed_floor(uint8_t num);
 
-bool buttonGetPressed_Direction(uint8_t num);
+bool buttongetpressed_direction(uint8_t num);
 
 #endif /* INC_BUTTON_H_ */
