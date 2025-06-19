@@ -22,10 +22,9 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,10 +94,8 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   i2cLcd_Init();
-  moveCursor(0, 0);
-  lcdString("Hello ARM !!!");
-  moveCursor(1, 0);
-  lcdString("Good Morning !");
+
+  lcdStart(prefix[0], 0, 3);
   /* USER CODE END 2 */
 
   /* Infinite loop */

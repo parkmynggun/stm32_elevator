@@ -1,5 +1,7 @@
-../Core/Src/lcd.c:9:6:lcdCommand	2
-../Core/Src/lcd.c:22:6:lcdData	2
-../Core/Src/lcd.c:35:6:i2cLcd_Init	1
-../Core/Src/lcd.c:52:6:lcdString	2
-../Core/Src/lcd.c:57:6:moveCursor	1
+../Core/Src/lcd.c:18:6:lcdCommand	2
+../Core/Src/lcd.c:31:6:lcdData	2
+../Core/Src/lcd.c:44:6:i2cLcd_Init	1
+../Core/Src/lcd.c:61:6:lcdString	2
+../Core/Src/lcd.c:66:6:moveCursor	1
+../Core/Src/lcd.c:80:7:returnLcdString	2
+../Core/Src/lcd.c:101:6:lcdStart	1
