@@ -29,4 +29,7 @@ uint16_t steps_to_move;
 
 
 
+// 현재 lcd 메세지 상태
+uint32_t current_msg;
+
 #endif /* INC_COMMON_H_ */

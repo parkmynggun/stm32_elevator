@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "i2c.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -92,6 +93,7 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM11_Init();
   MX_USART2_UART_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start(&htim11);                  // 타이머11 시작 (지연 등 용도)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);     // TIM3 CH2 서보용 PWM 시작
