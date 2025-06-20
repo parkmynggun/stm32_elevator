@@ -1,6 +1,6 @@
 #include "lcd.h"
-#include <stdio.h>
-#include "i2c.h"
+
+
 
 extern I2C_HandleTypeDef hi2c1;
 
@@ -107,3 +107,20 @@ void lcdStart(const char *upperPrefix, uint8_t stateIndex, uint8_t floor)
     lcdString(returnLcdString(stateIndex, stateIndex, floor, 1));
 }
 
+void lcdHandler()
+{
+	if(current_floor < target_floor)
+	  {
+		  lcdStart(prefix[0], 0, target_floor);
+	  }
+
+	  if(current_floor == target_floor)
+	  {
+		  lcdStart(prefix[1], 1, target_floor);
+	  }
+
+	  if(current_floor > target_floor)
+	  {
+		  lcdStart(prefix[0], 2, target_floor);
+	  }
+}
