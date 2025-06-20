@@ -25,6 +25,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "button.h"
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,6 +54,8 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+
+
 
 /* USER CODE END PFP */
 
@@ -93,12 +98,25 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  if(buttongetpressed_floor(0))
+  	  {
+  		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
+  	  }
+  	  if(buttongetpressed_floor(1))
+  	  {
+  		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
+  	  }
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
