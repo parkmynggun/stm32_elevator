@@ -3,6 +3,7 @@
 
 #include "main.h"
 #include "string.h"
+#include "common.h"
 
 /*
  * I2C LCD는 4bit 통신
