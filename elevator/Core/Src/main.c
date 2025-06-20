@@ -117,7 +117,8 @@ int main(void)
     // 상태 갱신 (항상 마지막에 해야 중복 실행 안 됨)
 
     /* USER CODE END WHILE */
-
+	  FND_Start();
+	  lcdHandler();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
