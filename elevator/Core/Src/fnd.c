@@ -74,3 +74,18 @@ void FND_Display(uint8_t num) {
         HAL_GPIO_WritePin(SEG_GPIO_PORT[i], SEG_GPIO_PIN[i], state);
     }
 }
+
+void FND_Start(void) {
+	if(current_floor == 1)
+	  {
+		  FND_Display(1);
+	  }
+	  if(current_floor == 2)
+	  {
+		  FND_Display(2);
+	  }
+	  if(current_floor == 3)
+	  {
+		  FND_Display(3);
+	  }
+}
