@@ -49,6 +49,9 @@
 
 /* USER CODE BEGIN PV */
 
+  uint8_t currentFloor = 0;		// 현재 위치
+  uint8_t previousFloor = 0;	// 직전 위치
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,18 +99,28 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  Photo_Init();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  uint8_t sensed = current_floor();
-	  if(sensed == target_floor)
+	  uint8_t current_floor = Photo_GetFloor();
+
+
+	  if(current_floor == 1)
 	  {
-		  stepper_stop();
-		  current_floor = target_floor;
-		  break;
+		  // LCD : 1 floor
+	  }
+	  else if(current_floor == 2)
+	  {
+		  // LCD : 2 floor
+	  }
+	  else if(current_floor == 3)
+	  {
+		  // LCD : 3 floor
 	  }
     /* USER CODE END WHILE */
 
