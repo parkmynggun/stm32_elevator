@@ -25,6 +25,10 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "lcd.h"
+#include "motor.h"
+#include "fnd.h"
+#include "photo.h"
+#include "button.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,7 +97,6 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   i2cLcd_Init();
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,6 +104,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  FND_Start();
 	  lcdHandler();
     /* USER CODE BEGIN 3 */
   }
