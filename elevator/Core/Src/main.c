@@ -94,14 +94,18 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  for (uint8_t i = 0; i < 10; i++) {
+	  if(current_floor == 1)
+	  {
 		  FND_Display(1);
-		  HAL_Delay(1000);
-		  FND_Display(2);
-		  HAL_Delay(1000);
-		  FND_Display(3);
-		  HAL_Delay(1000);
 	  }
+	  if(current_floor == 2)
+		  {
+			  FND_Display(2);
+		  }
+	  if(current_floor == 3)
+		  {
+			  FND_Display(3);
+		  }
 
 
   }
