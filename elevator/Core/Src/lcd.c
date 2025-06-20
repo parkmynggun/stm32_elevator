@@ -1,6 +1,6 @@
 #include "lcd.h"
-
-
+#include <stdio.h>
+#include "i2c.h"
 
 extern I2C_HandleTypeDef hi2c1;
 

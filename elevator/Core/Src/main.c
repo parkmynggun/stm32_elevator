@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 
 #include "button.h"
+#include "common.h"
 
 
 /* USER CODE END Includes */
@@ -49,14 +50,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
-
 
 /* USER CODE END PFP */
 
@@ -100,14 +98,6 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
-  if(buttongetpressed_floor(0))
-  	  {
-  		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
-  	  }
-  	  if(buttongetpressed_floor(1))
-  	  {
-  		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
-  	  }
 
 
   /* USER CODE END 2 */
@@ -116,9 +106,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
-
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
