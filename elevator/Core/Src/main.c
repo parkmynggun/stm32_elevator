@@ -67,7 +67,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -95,20 +94,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   i2cLcd_Init();
 
-  if(current_floor < target_floor)
-  {
-	  lcdStart(prefix[0], 0, target_floor);
-  }
-
-  if(current_floor == target_floor)
-  {
-	  lcdStart(prefix[1], 1, target_floor);
-  }
-
-  if(current_floor > target_floor)
-  {
-	  lcdStart(prefix[0], 2, target_floor);
-  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -116,7 +101,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  lcdHandler();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

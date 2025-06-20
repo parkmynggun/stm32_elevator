@@ -28,4 +28,5 @@ void lcdString(char *str);
 void moveCursor(uint8_t row, uint8_t col);
 char* returnLcdString(const char *prefixStr, uint8_t stateIndex, uint8_t floor, uint8_t option);
 void lcdStart(const char *upperPrefix, uint8_t stateIndex, uint8_t floor);
+void lcdHandler();
 #endif /* INC_LCD_H_ */

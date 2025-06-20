@@ -5,3 +5,4 @@
 ../Core/Src/lcd.c:66:6:moveCursor	1
 ../Core/Src/lcd.c:80:7:returnLcdString	2
 ../Core/Src/lcd.c:101:6:lcdStart	1
+../Core/Src/lcd.c:110:6:lcdHandler	4
