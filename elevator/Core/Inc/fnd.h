@@ -6,5 +6,6 @@
 
 void FND_Init(void);
 void FND_Display(uint8_t num);
+void FND_Start(void);
 
 #endif

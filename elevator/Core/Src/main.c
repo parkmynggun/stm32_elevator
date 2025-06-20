@@ -94,18 +94,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if(current_floor == 1)
-	  {
-		  FND_Display(1);
-	  }
-	  if(current_floor == 2)
-		  {
-			  FND_Display(2);
-		  }
-	  if(current_floor == 3)
-		  {
-			  FND_Display(3);
-		  }
+	  FND_Start();
 
 
   }
