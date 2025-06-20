@@ -19,7 +19,4 @@ extern uint8_t target_floor;
 // 문 열림 여부 1이면 열림 0이면 닫힘
 extern uint8_t is_door_open;
 
-// 현재 lcd 메세지 상태
-extern uint32_t current_msg;
-
 #endif /* INC_COMMON_H_ */
