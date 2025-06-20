@@ -5,6 +5,7 @@
 
 
 #include "main.h"
+#include "common.h"
 
 
 // 핀 정의

@@ -7,3 +7,5 @@
 
 
 #include "common.h"
+
+uint8_t current_floor = 0;

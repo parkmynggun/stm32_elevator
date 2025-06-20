@@ -2,7 +2,10 @@
 #include "photo.h"
 
 
-void Photo_Init();
+void Photo_Init()
+{
+
+}
 
 uint8_t Photo_GetFloor()
 {

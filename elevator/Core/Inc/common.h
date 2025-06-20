@@ -11,12 +11,12 @@
 #include "main.h"
 
 // 현재 층수 1,2,3
-uint8_t current_floor;
+extern uint8_t current_floor;
 
 // 목표 층수 1,2,3
-uint8_t target_floor;
+extern uint8_t target_floor;
 
 // 문 열림 여부 1이면 열림 0이면 닫힘
-uint8_t is_door_open;
+extern uint8_t is_door_open;
 
 #endif /* INC_COMMON_H_ */
