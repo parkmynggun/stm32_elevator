@@ -25,10 +25,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "lcd.h"
+#include "motor.h"
+#include "fnd.h"
 #include "photo.h"
-#include "common.h"
-
+#include "button.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -101,9 +102,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
-  Photo_Init();
-
+  i2cLcd_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -127,7 +126,8 @@ int main(void)
 //		  // LCD : 3 floor
 //	  }
     /* USER CODE END WHILE */
-
+	  FND_Start();
+	  lcdHandler();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
