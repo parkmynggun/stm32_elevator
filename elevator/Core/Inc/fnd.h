@@ -1,13 +1,9 @@
-/*
- * fnd.h
- *
- *  Created on: Jun 19, 2025
- *      Author: user10
- */
-
-#ifndef INC_FND_H_
-#define INC_FND_H_
+#ifndef FND_H
+#define FND_H
 
 #include "main.h"
 
-#endif /* INC_FND_H_ */
+void FND_Init(void);
+void FND_Display(uint8_t num);
+
+#endif
