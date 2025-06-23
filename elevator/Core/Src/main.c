@@ -56,7 +56,13 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//{
+    //if(htim->Instance == TIM10)  // TIM10 인터럽트인지 확인
+    //{
+    //    FND_Start();  // 7세그먼트 출력 함수 호출
+  //  }
+//}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -97,17 +103,24 @@ int main(void)
   MX_TIM11_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
+  MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
   i2cLcd_Init();
+  Motor_Init();
+  FND_Init();
+  Photo_Init();
+  HAL_TIM_Base_Start_IT(&htim10);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
+  {  Motor_HandleInput();
+
+  //FND_Start();
+ // Photo_GetFloor();
     /* USER CODE END WHILE */
-	  FND_Start();
-	  lcdHandler();
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

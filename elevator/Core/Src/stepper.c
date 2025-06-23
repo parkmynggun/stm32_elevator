@@ -37,7 +37,16 @@ void rotateSteps(uint16_t steps, uint8_t direction)
 
         stepMotor(step);
         delay_us(1000); // 1ms
+
+        if (i % 10 == 0)  // 예: 100 스텝마다 화면 갱신
+          {
+              FND_Start();      // 세그먼트 갱신
+              Photo_GetFloor();
+
+          }
+
     }
+   // FND_Start();
 }
 
 void rotateDegrees(uint8_t degrees, uint8_t direction)

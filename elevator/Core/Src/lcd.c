@@ -1,7 +1,6 @@
 #include "lcd.h"
 
 
-
 extern I2C_HandleTypeDef hi2c1;
 
 const char *state[] = {

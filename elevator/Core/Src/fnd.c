@@ -1,6 +1,6 @@
 #include "fnd.h"
 #include "gpio.h"
-
+#include "photo.h"
 // 7세그먼트 숫자 패턴 (0~9)
 static const uint8_t seg_pattern[10] = {
     0b00111111,  // 0
@@ -76,15 +76,15 @@ void FND_Display(uint8_t num) {
 }
 
 void FND_Start(void) {
-	if(current_floor == 1)
+	if(last_floor == 1)
 	  {
 		  FND_Display(1);
 	  }
-	  if(current_floor == 2)
+	  if(last_floor == 2)
 	  {
 		  FND_Display(2);
 	  }
-	  if(current_floor == 3)
+	  if(last_floor == 3)
 	  {
 		  FND_Display(3);
 	  }

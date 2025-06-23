@@ -19,4 +19,6 @@ extern uint8_t target_floor;
 // 문 열림 여부 1이면 열림 0이면 닫힘
 extern uint8_t is_door_open;
 
+extern uint8_t last_floor; // 포토센서 층수관리코드
+
 #endif /* INC_COMMON_H_ */
