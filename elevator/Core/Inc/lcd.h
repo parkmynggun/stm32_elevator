@@ -20,6 +20,7 @@
 
 extern const char *state[];
 extern const char *prefix[];
+uint8_t test;
 
 void lcdCommand(uint8_t command);
 void lcdData(uint8_t data);
